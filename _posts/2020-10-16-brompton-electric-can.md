@@ -14,7 +14,7 @@ The electric motor is developed by Williams Advanced Engineering and the battery
 
 {% include image.html url="/assets/images/IMG_2928.jpeg" description="Charging port with CAN high (red) and CAN low wires connected to a Vector CAN dongle or Raspberry Pi" %}
 
-The electronic components (battery, motor, pedal sensors, controller) communicate via CAN at 500kbps. The busload was 35%, which is pretty high for a bicycle - maybe this was a Williams design decision. To record data during a cycling trip, I attached a Raspberry Pi Zero and [CAN Hat](https://thepihut.com/products/rs485-can-hat-for-raspberry-pi) to the CAN lines of the charging port, and powered it from the built-in USB charger. 
+The electronic components (battery, motor, pedal sensors, controller) communicate via CAN at 500kbps. The busload was 35%, which is pretty high for a bicycle - maybe this was a Williams design decision. To record data while cycling, I attached a Raspberry Pi Zero and [CAN Hat](https://thepihut.com/products/rs485-can-hat-for-raspberry-pi) to the CAN lines of the charging port, and powered it from the built-in USB charger. 
 
 I initially tried to use the `python-can` library to log the messages directly as a .blf file, but the overhead from python maxed out the Pi, and caused messages to drop. So I chose to use `candump` to record the data, and converted it to a .blf file offline.
 ```bash
