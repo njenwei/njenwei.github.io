@@ -6,51 +6,47 @@
   <title>{{ page.title }}</title>
   {% seo %}
   <link rel="stylesheet" href="/assets/css/tailwind-ui.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tailwindcss/typography@0.2.x/dist/typography.min.css"/>
+  <link rel="stylesheet" href="/assets/css/typography.min.css"/>
 </head>
 <body>
 <div class="min-h-screen bg-gray-100">
   <div class="py-8">
     <main>
-      <div class="max-w-7xl mx-auto px-8">
-        <div class="max-w-7xl mx-auto px-8">
-          <div class="max-w-3xl mx-auto">
-            <div class="bg-white overflow-hidden overflow-hidden shadow rounded-lg">
-              <div class="py-4 px-6">
-                <div class="flex justify-between items-center flex-no-wrap">
-                  <div class="mt-4">
-                    <div class="flex items-center">
-                      <div class="flex-shrink-0">
-                        <a href="/">
-                          <img class="inline-block h-12 w-12 rounded-full" src="/assets/images/me.jpg" alt="">
-                        </a>
-                      </div>
-                      <div class="ml-4">
-                        <h3 class="text-lg leading-6 font-medium text-gray-900">
-                          <a href="/">Niam Jen Wei</a>
-                        </h3>
-                        <p class="text-sm leading-5 text-gray-500">
-                          jw@njenwei.com
-                        </p>
-                      </div>
-                    </div>
+      <div class="max-w-2xl mx-auto">
+        <div class="bg-white overflow-hidden overflow-hidden shadow rounded-lg">
+          <div class="py-4 px-6">
+            <div class="flex justify-between items-center flex-no-wrap">
+              <div class="mt-4">
+                <div class="flex items-center">
+                  <div class="flex-shrink-0">
+                    <a href="/">
+                      <img class="inline-block h-12 w-12 rounded-full" src="/assets/images/me.jpg" alt="">
+                    </a>
                   </div>
-                  <div class="ml-4 mr-2 mt-4 flex-shrink-0 flex">
-                    <nav>
-                      {% for item in site.data.navigation %}
-                      <a href="{{ item.link }}" class="text-sm text-right font-medium">
-                        {{ item.name }}
-                      </a>
-                      <br>
-                      {% endfor %}
-                    </nav>
+                  <div class="ml-4">
+                    <h3 class="text-lg leading-6 font-medium text-gray-900">
+                      <a href="/">Niam Jen Wei</a>
+                    </h3>
+                    <p class="text-sm leading-5 text-gray-500">
+                      <a href="mailto: jw@njenwei.com">jw@njenwei.com</a>
+                    </p>
                   </div>
                 </div>
               </div>
-              <div class="py-4 px-6 mb-4">
-                {{ content }}
+              <div class="ml-4 mr-2 mt-2 flex-shrink-0 flex">
+                <nav>
+                  {% for item in site.data.navigation %}
+                  <a href="{{ item.link }}" class="text-sm text-right font-medium">
+                    {{ item.name }}
+                  </a>
+                  <br>
+                  {% endfor %}
+                </nav>
               </div>
             </div>
+          </div>
+          <div class="py-4 px-6 mb-4">
+            {{ content }}
           </div>
         </div>
       </div>
